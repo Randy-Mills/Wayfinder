@@ -1,0 +1,30 @@
+input {
+	width: 80%;
+}
+
+#searchBtn {
+	color: #FFFFFF;
+	background-color: #DF0337;
+}
+
+.bar {
+	width: 100%;
+	display: block;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.footer {
+	height: 10px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+.header {
+	height: 10px;
+}
