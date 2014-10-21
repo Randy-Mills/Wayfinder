@@ -33,24 +33,34 @@
         <title>Wayfinder</title>
     </head>
     <body>
-        <div data-role='page' id='indexPage'>
+        <div data-role='page' id='indexPage' class='home-body'>
             <div class='bar header bg-color-3'></div>
-            <div class='bar bg-color-4'><span class='color-1'>HEADREST HOURS</span><span class='color-1' style='float: right;'>8:00 - 9:00</span></div>
-            <h1>UNB Wayfinder</h1>
-            <div id="deviceready" class='centered'>
-                <label for="start">STARTING ROOM NUMBER</label>
-                <input type="text" name="start" id="start" value=""  />
-                <br/>
-                <label for="dest">DESTINATION ROOM NUMBER</label>
-                <input type="text" name="dest" id="dest" value=""  />
-
-                <a id='searchBtn' data-role='button' data-icon='search' data-iconpos='right'>SEARCH</a>
-            </div>
-            <div class='bar option-menu bg-color-4'>
-                <span class='color-1'>LOOKING FOR SOMETHING?</span>
-                <span>bath</span>
-                <span>food</span>
-                <div style='float: right;'>HELP<span>i</span></div>
+            <div class='content'>
+                <div class='bar bg-color-4'><span class='color-1'>HEADREST HOURS</span><span class='color-1' style='float: right;'>8:00 - 9:00</span></div>
+                <div id="deviceready" class='centered'>
+                    <div id='logo' class='centered'></div>
+                    <div class='input-block centered'>
+                        <label for="start">STARTING ROOM NUMBER</label>
+                        <input type="text" name="start" id="start" value="" data-mini="true" />
+                    </div>
+                    <div class='input-block centered'>
+                        <label for="dest">DESTINATION ROOM NUMBER</label>
+                        <input type="text" name="dest" id="dest" value="" data-mini="true" />
+                    </div>
+                    <div class='input-block centered'>
+                        <a id='searchBtn' data-role='button' data-icon='search' data-iconpos='right'>SEARCH</a>
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+                            <input type="checkbox" name="accessCheckbox" id="accessCheckbox" />
+                            <label class='check-label' for="accessCheckbox"><span id='accessIcon'>&nbsp;</span></label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class='bar option-menu bg-color-4'>
+                    <span class='color-1'>LOOKING FOR SOMETHING?</span>
+                    <span id='washroomBtn'>bath</span>
+                    <span id='foodBtn'>food</span>
+                    <div id='helpBtn' style='float: right;'>HELP<span>i</span></div>
+                </div>
             </div>
             <div class='bar footer bg-color-3'></div>
         </div>

@@ -16,6 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+//----GLOBALS----\\
+var start;
+var dest;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -46,12 +50,25 @@ var app = {
 app.initialize();
 
 function search() {
-    var start = $('#start').val();
-    var dest = $('#dest').val();
+    //Assign global variables
+    start = $('#start').val();
+    dest = $('#dest').val();
 
     $(":mobile-pagecontainer").pagecontainer("change", "map.html");
 }
 
 $(document).on('click', '#searchBtn', function () {
     search();
+});
+
+$(document).on('click', '#washroomBtn', function () {
+    $('#dest').val("Washroom")
+});
+
+$(document).on('click', '#foodBtn', function () {
+    $('#dest').val("Food")
+});
+
+$(document).on('click', '#helpBtn', function () {
+     $(":mobile-pagecontainer").pagecontainer("change", "info.html");
 });
