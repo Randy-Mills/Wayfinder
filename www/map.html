@@ -1,9 +1,29 @@
 <div data-role='page' id='mapPage'>
     <div class='bar header bg-color-3'></div>
     <div class='content'>
-	    <div class='map-view'>
-	    	<img src='img/maps/CLevel.png' alt='map' />
-	    </div>
+    	<div class='info-view'>
+    		<div id='destInfo'>
+    			<div>DESTINATION</div>
+    			<div id='destText'>c14</div>
+    		</div>
+    		<div id='infoSearchBtn' class='header-button bg-color-5'>S</div>
+    		<div id='infoInfoBtn' class='header-button bg-color-5'>I</div>
+    		<form id='modeControls'>
+    			<fieldset data-role="controlgroup" data-type="horizontal">
+			        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="map" checked="checked">
+			        <label for="radio-choice-h-2a">MAP</label>
+			        <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="text">
+			        <label for="radio-choice-h-2b">TEXT</label>
+			    </fieldset>
+    		</form>
+    	</div>
+    	<div class='map-container'>
+		    <div class='map-view'>
+		    	<img id='pathImage' src='img/paths/pathExample.png' alt='path' />
+		    	<img id='mapImage' src='img/maps/CLevel.png' alt='map' />
+		    </div>
+		</div>
+	    <div id='floorControls'></div>
 	</div>
     <div class='bar footer bg-color-3'></div>
 </div>

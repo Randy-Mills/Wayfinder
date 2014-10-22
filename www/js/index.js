@@ -51,10 +51,23 @@ app.initialize();
 
 function search() {
     //Assign global variables
-    start = $('#start').val();
-    dest = $('#dest').val();
+    start = $('#start').val().toUpperCase();
+    dest = $('#dest').val().toUpperCase();
 
-    $(":mobile-pagecontainer").pagecontainer("change", "map.html");
+    if(start.trim().length == 0) {
+        alert("Please enter a starting location.");
+    } else if(dest.trim().length == 0) {
+        alert("Please enter a destination.")
+    } else if(buildAddresses() == 'not found') {
+        alert("A route could not be found. Please ensure you have entered your starting location and destination correctly.");
+    } else {
+        $(":mobile-pagecontainer").pagecontainer("change", "map.html");
+    }
+}
+
+function buildAddresses() {
+    //TO-DO
+    return 'found';
 }
 
 $(document).on('click', '#searchBtn', function () {

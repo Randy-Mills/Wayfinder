@@ -29,6 +29,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/colours.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/map.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.4.min.css" />
         <title>Wayfinder</title>
     </head>
@@ -41,11 +42,11 @@
                     <div id='logo' class='centered'></div>
                     <div class='input-block centered'>
                         <label for="start">STARTING ROOM NUMBER</label>
-                        <input type="text" name="start" id="start" value="" data-mini="true" />
+                        <input type="text" name="start" id="start" value="" data-mini="true" data-clear-btn="true"/>
                     </div>
                     <div class='input-block centered'>
                         <label for="dest">DESTINATION ROOM NUMBER</label>
-                        <input type="text" name="dest" id="dest" value="" data-mini="true" />
+                        <input type="text" name="dest" id="dest" value="" data-mini="true" data-clear-btn="true"/>
                     </div>
                     <div class='input-block centered'>
                         <a id='searchBtn' data-role='button' data-icon='search' data-iconpos='right'>SEARCH</a>
@@ -68,6 +69,7 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/map.js"></script>
+        <script type="text/javascript" src="js/pathMappings.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.4.min.js"></script>
         <script type="text/javascript">
             app.initialize();
