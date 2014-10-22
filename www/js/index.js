@@ -19,6 +19,7 @@
 //----GLOBALS----\\
 var start;
 var dest;
+var path;
 
 var app = {
     // Application Constructor
@@ -66,8 +67,19 @@ function search() {
 }
 
 function buildAddresses() {
-    //TO-DO
-    return 'found';
+    startTemp = start.toLowerCase();
+    destTemp = dest.toLowerCase();
+
+    if(synonyms[startTemp] != undefined) startTemp = synonyms[startTemp];
+    if(synonyms[destTemp] != undefined) destTemp = synonyms[destTemp];
+
+    path = startTemp + '_' + destTemp;
+
+    if(paths[path] == undefined) {
+        return 'not found';    
+    }
+    
+    return path;
 }
 
 $(document).on('click', '#searchBtn', function () {

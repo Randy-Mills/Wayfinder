@@ -12,8 +12,9 @@
 }
 
 #logo {
+	margin-top: 40px;
 	width: 120px;
-	height: 128px;
+	height: 154px;
 	background-image: url('../img/logo.png');
 	margin-bottom: 20px;
 }
@@ -47,20 +48,20 @@
 
 .content {
 	position: absolute;
-	top: 20px;
-	bottom: 20px;
+	top: 10px;
+	bottom: 10px;
 	width: 100%;
 }
 
 .footer {
-	height: 20px;
+	height: 10px;
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
 }
 
 .header {
-	height: 20px;
+	height: 10px;
 	position: fixed;
 	top: 0px;
 }
@@ -78,5 +79,6 @@
 }
 
 .home-body {
-	/*background-image: url('../img/back.png');*/
+	background-image: url('../img/bg.png');
+	background-position-x: -190px;
 }

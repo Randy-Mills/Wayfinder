@@ -10,7 +10,7 @@ $(document).on('pagecreate', '#mapPage', function(event) {
 	});
 
 	$('#destText').text(dest);
-	//loadPath();
+	loadPath();
 });
 
 function changeFloor(direction) {
@@ -21,6 +21,15 @@ function changeFloor(direction) {
 	}
 }
 
-function loadPath(path, level) {
-	currentFloor = level;
+function loadPath() {
+	var levels = ['A','B','C','D','E'];
+	currentFloor = levels.indexOf(paths[path][0])+1;
+
+	console.log(currentFloor);
+
+	$('#mapImage').attr('src', 'img/maps/' + paths[path][0] + 'Level.jpg');
+	$('#pathImage').attr('src', 'img/paths/' + paths[path][currentFloor]);
+
+	console.log(paths[path][0]);
+	console.log(paths[path][currentFloor]);
 }
