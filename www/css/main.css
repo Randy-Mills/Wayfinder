@@ -20,7 +20,19 @@
 }
 
 #helpBtn {
-	background-color: #666666;
+	float: right;
+	width: 89px;
+	height: 100%;
+	margin: auto;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#optionText {
+	font-size: 0.88em;
+	margin-top: 7px;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 #searchBtn {
@@ -30,6 +42,7 @@
 	background-color: #DF0337;
 	padding: 0.5em 2.25em 0.5em 0.5em;
 	float: left;
+	margin-left: 10px;
 }
 
 .bar {
@@ -71,14 +84,65 @@
 	margin-bottom: 20px;
 }
 
+.option-btn {
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	width: 50px;
+	display: block;
+}
+
+.option-btn img {
+	display: block;
+	margin: auto;
+}
+
 .option-menu {
 	font-size: 13px;
-	height: 25px;
+	height: 30px;
 	position: absolute;
 	bottom: 0px;
+}
+
+.option-menu div {
+	float: left;
 }
 
 .home-body {
 	background-image: url('../img/bg.png');
 	background-position-x: -190px;
+	background-position-y: 26px;
+	background-repeat: no-repeat;
+	background-color: #F4FAFB !important;
+}
+
+.text_box {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 25px;
+}
+
+.text_box p {
+	font-size: 0.9em;
+}
+
+#icons img {
+	float: left;
+	height: 25px;
+	margin-left: 10px;
+}
+
+.icon-set {
+	margin-bottom: 5px;
+	display: block;
+}
+
+.icon-set h3 {
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	margin-left: 10px;
 }

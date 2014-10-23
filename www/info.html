@@ -1,8 +1,53 @@
-<div data-role='page' id='infoPage'>
+<div data-role='page' id='infoPage' class='home-body'>
     <div class='bar header bg-color-3'></div>
     <div class='content'>
-	    <h1>Info page</h1>
-		<p>Here is some info</p>
-	</div>
+        <div id="info" class='centered text_box'>
+            <div style='margin-top: 15px;' class='centered'>
+            	<img src="img/logo.png" style='height: 100px;' />
+            	<img src="img/info.png" style='margin-left: 30px; margin-bottom: 20px;'/>
+            </div>
+            <div>
+                <h1>Icons &amp Buttons</h1>
+                <img src="img/red_line.png" style='margin-left: -40px;'>
+            </div>
+            <div id='icons' class="centered">
+                <div class='icon-set'>
+                	<img src="img/help.png" style='margin-right: 26px;'/>
+                	<h3>Help &amp Information</h3>
+                </div>
+                <div class='icon-set'>
+                	<img src="img/accessibility.png" style='margin-right: 9px;'/>
+                	<h3>Accessibility Route</h3>
+                </div>
+                <div class='icon-set'>
+                	<img src="img/search.png" style='margin-right: 15px;'/>
+                	<h3>Search &amp Start Screen</h3>
+                </div>
+                <div class='icon-set'>
+                	<img src="img/washroom.png" style='margin-right: 17px;'/>
+                	<h3>Washrooms</h3>
+                </div>
+                <div class='icon-set'>
+                	<img src="img/food.png" style='margin-right: 23px;'/>
+                	<h3>Food</h3>
+                </div>
+            </div>
+            <div id="information">
+                <h1>Information</h1>
+                <img src="img/red_line.png" style='margin-left: -40px;'>
+            </div>
+            <div class="centered">
+                <h4>Start Screen</h4>
+                <p>To get started, enter the room number of your current location in the 'Starting Room Number' field and the room number of your desired destination in the 'Destination Room Number' field. Once these values have been inputted, you can search for the path.</p>
+                <p>If you require an accessibility route, click the 'Accssibility Route' icon beside the search buton. This icon will be blue when selected and grey when inactive. Accessible routes will use elevators instead of stairs.</p>
+                <p>If you wish to locate washrooms or areas to get food, click the 'Washrooms' or 'Food' icon on the bottom of t5he screen. By clicking these buttons, the destination field will be filled with your choice.</p>
+                <br>
+                <h4>Map Screen</h4>
+                <p>The map screen will first appear when a search has been processed from the start screen. At the top of the page, the destination is displayed to remind you where you want to go. The 'Help &amp Information' icon will bring you to this page if you need help navigating the map. The 'Search' icon will bring you back to the start screen if you made a mistake in your starting point or destination.</p>
+                <p>The 'Map' tab will be selected to show the route from the starting point to the destination. You may drag the map to view different parts of the route as you walk along. The map route will appear red on the map, but this route will be blue for the accessibility option. When you reach a staircase or elevator, the route will end for the current floor and you can acces the next floor by clicking the up/down arrows in the bottom left-hand corner of the map.</p>
+                <p>If you click the 'Text' tab, the view will switch from an image of a map to textual instructions for getting from the starting point to the destination. These are simple instructions that will change based on whether the accessibility option has been selected. The instructions will take the same path as the map.</p>
+            </div>
+        </div>
+    </div>
     <div class='bar footer bg-color-3'></div>
 </div>

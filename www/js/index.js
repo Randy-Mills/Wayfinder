@@ -20,6 +20,7 @@
 var start;
 var dest;
 var path;
+var access = false;
 
 var app = {
     // Application Constructor
@@ -55,6 +56,14 @@ function search() {
     start = $('#start').val().toUpperCase();
     dest = $('#dest').val().toUpperCase();
 
+    console.log(start + " " + dest);
+
+    if($('#access').hasClass('ui-checkbox-on')) {
+        access = true;
+    } else {
+        access = false;
+    }
+
     if(start.trim().length == 0) {
         alert("Please enter a starting location.");
     } else if(dest.trim().length == 0) {
@@ -62,18 +71,22 @@ function search() {
     } else if(buildAddresses() == 'not found') {
         alert("A route could not be found. Please ensure you have entered your starting location and destination correctly.");
     } else {
-        $(":mobile-pagecontainer").pagecontainer("change", "map.html");
+         $(":mobile-pagecontainer").pagecontainer("change", "map.html");
     }
 }
 
 function buildAddresses() {
     startTemp = start.toLowerCase();
     destTemp = dest.toLowerCase();
+    startTemp = startTemp.replace('-','');
+    destTemp = destTemp.replace('-','');
 
     if(synonyms[startTemp] != undefined) startTemp = synonyms[startTemp];
     if(synonyms[destTemp] != undefined) destTemp = synonyms[destTemp];
 
     path = startTemp + '_' + destTemp;
+
+    if(access) path = 'a_' + path;
 
     if(paths[path] == undefined) {
         return 'not found';    
@@ -95,5 +108,5 @@ $(document).on('click', '#foodBtn', function () {
 });
 
 $(document).on('click', '#helpBtn', function () {
-     $(":mobile-pagecontainer").pagecontainer("change", "info.html");
+    $(":mobile-pagecontainer").pagecontainer("change", "info.html");
 });

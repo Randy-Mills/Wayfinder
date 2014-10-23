@@ -37,7 +37,7 @@
         <div data-role='page' id='indexPage' class='home-body'>
             <div class='bar header bg-color-3'></div>
             <div class='content'>
-                <div class='bar bg-color-4'><span class='color-1'>HEADREST HOURS</span><span class='color-1' style='float: right;'>8:00 - 9:00</span></div>
+                <div class='bar bg-color-4'><span class='color-1'>HEADREST HOURS</span><span class='color-1' style='float: right;'>8:00AM - 9:00PM</span></div>
                 <div id="deviceready" class='centered'>
                     <div id='logo' class='centered'></div>
                     <div class='input-block centered'>
@@ -50,17 +50,17 @@
                     </div>
                     <div class='input-block centered'>
                         <a id='searchBtn' data-role='button' data-icon='search' data-iconpos='right'>SEARCH</a>
-                        <fieldset data-role="controlgroup" data-type="horizontal">
-                            <input type="checkbox" name="accessCheckbox" id="accessCheckbox" />
-                            <label class='check-label' for="accessCheckbox"><span id='accessIcon'>&nbsp;</span></label>
-                        </fieldset>
+                        <div class="ui-checkbox" style='float: right; margin-right: 10px;'>
+                            <label id='access' for="checkbox-enhanced" class="ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-checkbox-off" style='height: 17px;'><img src='img/access.png' alt='accessability icon' style='margin-top: -2px;'/></label>
+                            <input type="checkbox" name="checkbox-enhanced" id="checkbox-enhanced" data-enhanced="true">
+                        </div>
                     </div>
                 </div>
                 <div class='bar option-menu bg-color-4'>
-                    <span class='color-1'>LOOKING FOR SOMETHING?</span>
-                    <span id='washroomBtn'>bath</span>
-                    <span id='foodBtn'>food</span>
-                    <div id='helpBtn' style='float: right;'>HELP<span>i</span></div>
+                    <div id='optionText' class='color-1'>LOOKING FOR SOMETHING?</div>
+                    <div id='washroomBtn' class='option-btn'><img src='img/washroom_white.png' alt='washroom icon' /></div>
+                    <div id='foodBtn' class='option-btn'><img src='img/food_white.png' alt='food icon' /></div>
+                    <div id='helpBtn' ><span style='float: left; margin-top: 8px; margin-left: 14px;'>HELP</span><img src='img/help.png' style='float: right; margin-right: 20px; margin-top: 2px;'/></div>
                 </div>
             </div>
             <div class='bar footer bg-color-3'></div>
