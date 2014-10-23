@@ -99,8 +99,12 @@ $(document).on('click', '#searchBtn', function () {
     search();
 });
 
-$(document).on('click', '#washroomBtn', function () {
-    $('#dest').val("Washroom")
+$(document).on('click', '#wWash', function () {
+    $('#dest').val("Women's Washroom")
+});
+
+$(document).on('click', '#mWash', function () {
+    $('#dest').val("Men's Washroom")
 });
 
 $(document).on('click', '#foodBtn', function () {

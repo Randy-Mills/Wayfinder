@@ -103,7 +103,7 @@
 	bottom: 0px;
 }
 
-.option-menu div {
+.option-menu div, .option-menu a {
 	float: left;
 }
 
@@ -145,4 +145,8 @@
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 	margin-left: 10px;
+}
+
+.hidden {
+	display: none;
 }

@@ -99,6 +99,16 @@
 	height: 100%;
 }
 
+.direction-container {
+	position: absolute;
+	top: 120px;
+	height: 100%;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: serif;
+	padding: 10px;
+}
+
 .map-view {
 	position: absolute;
 	width: 100%;
