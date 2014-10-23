@@ -14,9 +14,27 @@
 #floorControls {
 	position: fixed;
 	left: 0px;
-	bottom: 70px;
-	height: 50px;
-	width: 25px;
+	bottom: 10px;
+	height: 130px;
+	width: 40px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 3px solid #000000;
+	z-index: 10;
+}
+
+#floorControls .ui-btn {
+	margin: auto;
+	width: 2em;
+	height: 2em;
+	border-radius: 5px;
+}
+
+#floorInfo {
+	font-family: serif;
+	font-weight: bold;
+	font-size: 3em;
+	color: #ffffff;
+	margin-left: 2px;
 }
 
 #infoInfoBtn {
@@ -35,6 +53,8 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
+	width: 3229px;
+	height: 2459px;
 }
 
 #pathImage {
@@ -64,7 +84,7 @@
 	position: fixed;
 	height: 120px;
 	width: 100%;
-	top: 20px;
+	top: 10px;
 }
 
 .map-container {

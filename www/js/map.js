@@ -1,35 +1,67 @@
 var currentFloor;
+var levels = ['A','B','C','D','E'];
+var mapInitialized = false;
 
 $(document).on('pagecreate', '#mapPage', function(event) {
-	$(document).on('click', '#infoSearchBtn', function () {
-	    $(":mobile-pagecontainer").pagecontainer("change", "index.html");
-	});
+	if(!mapInitialized) {
+		$(document).on('click', '#infoSearchBtn', function () {
+		    $(":mobile-pagecontainer").pagecontainer("change", "index.html");
+		});
 
-	$(document).on('click', '#infoInfoBtn', function () {
-	    $(":mobile-pagecontainer").pagecontainer("change", "info.html");
-	});
+		$(document).on('click', '#infoInfoBtn', function () {
+		    $(":mobile-pagecontainer").pagecontainer("change", "info.html");
+		});
+
+		$(document).on('click', '#upBtn', function () {
+		    changeFloor(0);
+		});
+
+		$(document).on('click', '#downBtn', function () {
+		    changeFloor(1);
+		});
+
+		mapInitialized = true;
+	}
 
 	$('#destText').text(dest);
+	currentFloor = levels.indexOf(paths[path][0])+1;
+	$('#pathImage').bind('load', scroll);
+
 	loadPath();
 });
 
 function changeFloor(direction) {
 	if(direction == 0) {
-		//Go down one floor
+		currentFloor++;
 	} else {
-		//Go up one floor
+		currentFloor--;
 	}
+
+	loadPath();
 }
 
 function loadPath() {
-	var levels = ['A','B','C','D','E'];
-	currentFloor = levels.indexOf(paths[path][0])+1;
-
-	console.log(currentFloor);
-
-	$('#mapImage').attr('src', 'img/maps/' + paths[path][0] + 'Level.jpg');
+	$('#mapImage').attr('src', 'img/maps/' + levels[currentFloor-1] + 'Level.jpg');
 	$('#pathImage').attr('src', 'img/paths/' + paths[path][currentFloor]);
 
-	console.log(paths[path][0]);
-	console.log(paths[path][currentFloor]);
+	if(currentFloor == 1 || paths[path][currentFloor-1] == null) {
+		$('#downBtn').addClass('ui-disabled');
+	} else {
+		$('#downBtn').removeClass('ui-disabled');
+	}
+
+	if(currentFloor == 5 || paths[path][currentFloor+1] == null) {
+		$('#upBtn').addClass('ui-disabled');
+	} else {
+		$('#upBtn').removeClass('ui-disabled');
+	}
+
+	$('#floorInfo').text(levels[currentFloor-1]);
 }
+
+var scroll = function() {
+	$(".map-view").animate({scrollTop:paths[path][6]}, 500);
+	$(".map-view").animate({scrollLeft:paths[path][7]}, 500);
+
+	$('#pathImage').unbind('load', scroll);
+};

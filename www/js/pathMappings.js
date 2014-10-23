@@ -6,8 +6,8 @@ var synonyms = {
 	'head rest': '119'
 }
 
-//Paths are setup as [start level, floor 1, floor 2, floor 3, floor 4, floor 5]
+//Paths are setup as [start level, floor 1, floor 2, floor 3, floor 4, floor 5, topStart, leftStart]
 var paths = {
-	'c13_119': ['C',null,null,'c13_119_C.png','c13_119_D.png', null],
+	'c13_119': ['C',null,null,'c13_119_C.png','c13_119_D.png', null, 1250, 1900],
 	'c13_D118': ['C',null,null,'c13_D118_C.png','c13_D118_D.png', null]
 };
