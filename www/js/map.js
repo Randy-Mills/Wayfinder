@@ -36,6 +36,7 @@ $(document).on('pagecreate', '#mapPage', function(event) {
 	});
 
 	$('#destText').text(dest);
+	if(dest.toLowerCase().indexOf('washroom') >= 0) $('#destText').text('Washroom');
 	currentFloor = levels.indexOf(paths[path][0])+1;
 	$('#pathImage').bind('load', scroll);
 
